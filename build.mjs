@@ -6,7 +6,7 @@ import { marked } from 'marked';
 
 const ROOT = process.cwd();
 const OUT = join(ROOT, '_site');
-const SKIP_DIRS = new Set(['node_modules', '_site', '.git', 'dist', 'raw', 'private', '_staging', 'build']);
+const SKIP_DIRS = new Set(['node_modules', '_site', '.git', '.workbuddy', 'dist', 'raw', 'private', '_staging', 'build']);
 
 /* ---------- 1. 收集 md 文件 ---------- */
 function walk(dir, acc = []) {

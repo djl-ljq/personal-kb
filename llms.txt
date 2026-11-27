@@ -51,7 +51,8 @@
 - [task-template.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/templates/task-template.md) — 2–5 分钟粒度的任务卡
 
 ### 沉淀
-- [digests/2026-11-26.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/digests/2026-11-26.md) — 每日情报简报（历史存档）
+- [digests/INDEX.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/digests/INDEX.md) — 每日简报索引（日期 / 主题 / 三条要点）
+- [digests/2026-11-26.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/digests/2026-11-26.md) — 每日情报简报（按日期归档）
 
 ## 三条不可违反的协作规则
 

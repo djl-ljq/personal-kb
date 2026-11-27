@@ -87,5 +87,5 @@
 | 规格模板 | 七项要素 + 编号验收标准 + 禁止 AI 自决事项 | `templates/spec-template.md` |
 | 决策记录模板 | Context→Decision→Consequences→Validation 四节 | `templates/adr-template.md` |
 | 任务清单模板 | 2–5 分钟粒度，含文件路径与验证步骤 | `templates/task-template.md` |
-| 每日简报 | 按日期归档的情报简报 | `digests/YYYY-MM-DD.md` |
+| 每日简报 | 按日期归档的情报简报 | `digests/YYYY-MM-DD.md`（索引见 `digests/INDEX.md`） |
 | 项目复盘 | 单项目结束后的脱敏复盘 | `journal/` |
