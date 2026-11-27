@@ -1,0 +1,69 @@
+# llms.txt — 机器可读入口
+
+> 给 AI 用的一张全量清单。人看的版本是 `README.md`；协作约定是 `AGENTS.md`。
+> 本文件里的链接**已做 URL 编码**，可直接 GET。中文文件名不编码会 404，这是最常见的踩坑点。
+
+## 用法（三步，别一次全读）
+
+1. 先读 `AGENTS.md`（约 55 行）——边界、禁令、协作规则。
+2. 再读 `index/TOPICS.md`——按主题定位到具体文件与章节号。
+3. 只取需要的那一节。四份核心文件合计约 110KB，全量读会挤掉任务本身。
+
+## 这是什么
+
+邓金龙（安全服务公司后端工程师，实际角色是方案设计 / 任务拆解 / AI 编排 / 验收测试）的个人工作方法库。
+内容全部为通用方法论，不含客户机密、不含公司内部方案。纯 Markdown + Git，任何 AI 可直接读取。
+
+## 文件清单
+
+### 入口
+- [AGENTS.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/AGENTS.md) — 给 AI 的协作约定（先读这个）
+- [README.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/README.md) — 给人看的说明
+- [index/TOPICS.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/index/TOPICS.md) — 主题索引（二级入口）
+
+### 方法论正文（00–03）
+- [00 体系使用指南与 AI 协作流程](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/00_%E4%BD%93%E7%B3%BB%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B8%8EAI%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B.md) — 七阶段流程、四种协作模式、信息七种状态
+- [01 通用分析与设计方法论](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/01_%E9%80%9A%E7%94%A8%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E8%AE%BA.md) — 从业务能力推到系统功能、设计质量检查
+- [02 标准方案与报告模板库](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/02_%E6%A0%87%E5%87%86%E6%96%B9%E6%A1%88%E4%B8%8E%E6%8A%A5%E5%91%8A%E6%A8%A1%E6%9D%BF%E5%BA%93.md) — 业务方案/建设方案/实施方案/验收报告的章节结构
+- [03 专业知识与行业实践手册](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/03_%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86%E4%B8%8E%E8%A1%8C%E4%B8%9A%E5%AE%9E%E8%B7%B5%E6%89%8B%E5%86%8C.md) — 概念、术语、架构做法
+
+### 交付链 · 十步（每步一张操作卡）
+- [0 立项](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/0-%E7%AB%8B%E9%A1%B9.md)
+- [1 需求分析](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90.md)
+- [2 业务架构](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/2-%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.md)
+- [3 系统架构](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/3-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.md)
+- [4 领域建模](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/4-%E9%A2%86%E5%9F%9F%E5%BB%BA%E6%A8%A1.md)
+- [5 技术架构与规格](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/5-%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84%E4%B8%8E%E8%A7%84%E6%A0%BC.md)
+- [6 开发](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/6-%E5%BC%80%E5%8F%91.md)
+- [7 测试与验收](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/7-%E6%B5%8B%E8%AF%95%E4%B8%8E%E9%AA%8C%E6%94%B6.md)
+- [8 上线与交接](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/8-%E4%B8%8A%E7%BA%BF%E4%B8%8E%E4%BA%A4%E6%8E%A5.md)
+- [9 验证与复盘](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/stages/9-%E9%AA%8C%E8%AF%81%E4%B8%8E%E5%A4%8D%E7%9B%98.md)
+
+### 剧本（整套打法）
+- [交付链条-十步](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/playbooks/%E4%BA%A4%E4%BB%98%E9%93%BE%E6%9D%A1-%E5%8D%81%E6%AD%A5.md) — 十步主链、DDD/SDD/TDD 落位、与七阶段对照
+- [接到活-六步法](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/playbooks/%E6%8E%A5%E5%88%B0%E6%B4%BB-%E5%85%AD%E6%AD%A5%E6%B3%95.md) — 单次任务的六步推进 + 三条铁律
+- [知识库规范-总纲](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/playbooks/%E7%9F%A5%E8%AF%86%E5%BA%93%E8%A7%84%E8%8C%83-%E6%80%BB%E7%BA%B2.md) — 文档分层、命名、入库规则
+- [项目目录规范-DevVault](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/playbooks/%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E8%A7%84%E8%8C%83-DevVault.md) — 一个项目仓库怎么摆
+
+### 模板
+- [spec-template.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/templates/spec-template.md) — 规格九段（含「禁止 AI 自行决定的事项」）
+- [adr-template.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/templates/adr-template.md) — 决策记录（含 ≥3 备选方案与复核记录）
+- [task-template.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/templates/task-template.md) — 2–5 分钟粒度的任务卡
+
+### 沉淀
+- [digests/2026-11-26.md](https://raw.githubusercontent.com/djl-ljq/personal-kb/main/digests/2026-11-26.md) — 每日情报简报（历史存档）
+
+## 三条不可违反的协作规则
+
+1. **先判断，再产出。** 重要分析先让我说理解和理由，你追问质疑，别直接甩成品。顺序：教练 → 协作 → 审查 → 执行。
+2. **信息分状态。** 事实 / 已确认决定 / 假设 / 推断 / 建议 / 待确认 / 待验证，七种分开标；没有依据的不许写成事实。
+3. **先查模板，再动笔。** 出方案/报告前先读 `02` 对应模板，按它的章节结构写。
+
+## 四条禁令
+
+不编造现状、痛点、数据、工期、人员、制度、接口、验收结果；不把「提到的功能」当已验证需求；不把行业惯例写成现行制度；不把推断写成已决定事项。
+
+## 站点（给人看）
+
+https://github.com/djl-ljq/personal-kb — 仓库
+Cloudflare Pages 上线后在此补充可浏览地址。
