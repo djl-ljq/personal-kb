@@ -7,17 +7,16 @@
 
 ---
 
-## 一、推到 GitHub（3 条命令）
+## 一、推到 GitHub（已完成 ✅）
 
-先在 GitHub 网页建一个空仓库，名字随意，建议 `personal-kb`，**选 Public**（公开才能让任何 AI 直接读）。
+仓库：https://github.com/djl-ljq/personal-kb （Public，main 分支已推送）
+
+后续更新只要：
 
 ```bash
 cd D:/personal-kb
-git remote add origin https://github.com/<你的用户名>/personal-kb.git
-git push -u origin main
+git add -A && git commit -m "更新内容" && git push
 ```
-
-> 分支名如果报错，先 `git branch -M main`。
 
 ## 二、接 Cloudflare Pages（网页点几下，不用命令行）
 
@@ -48,13 +47,13 @@ npx wrangler pages deploy _site --project-name personal-kb
 
 站建好后，AI 读这两个地址中的任意一个：
 
-- 原文（推荐，最省 token）：`https://raw.githubusercontent.com/<用户名>/personal-kb/main/AGENTS.md`
-- 若只想要某一节：`https://raw.githubusercontent.com/<用户名>/personal-kb/main/02_标准方案与报告模板库.md`（中文文件名建议 URL 编码，或用 `index/TOPICS.md` 里的位置说明）
+- 原文（推荐，最省 token）：`https://raw.githubusercontent.com/djl-ljq/personal-kb/main/AGENTS.md`
+- 若只想要某一节：`https://raw.githubusercontent.com/djl-ljq/personal-kb/main/02_标准方案与报告模板库.md`（中文文件名建议 URL 编码，或用 `index/TOPICS.md` 里的位置说明）
 
 新会话第一句可以直接写：
 
 ```
-先读 https://raw.githubusercontent.com/<用户名>/personal-kb/main/AGENTS.md，
+先读 https://raw.githubusercontent.com/djl-ljq/personal-kb/main/AGENTS.md，
 按里面的约定跟我协作，需要细节时再按 index/TOPICS.md 去取。
 ```
 
