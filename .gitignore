@@ -23,3 +23,7 @@ __pycache__/
 # 客户/项目原始资料（脱敏后再入库）
 raw/
 private/
+
+# 构建产物
+_site/
+node_modules/
