@@ -80,13 +80,15 @@ function rewriteLinks(html, fromRel) {
 /* ---------- 6. 导航 ---------- */
 const GROUP_LABEL = {
   entry: '入口',
-  '': '方法论',
+  '': '方法论（00–03）',
+  stages: '交付链 · 十步',
+  playbooks: '剧本',
   index: '索引',
   templates: '模板',
   digests: '每日简报',
   journal: '项目复盘',
 };
-const GROUP_ORDER = ['entry', '', 'index', 'templates', 'digests', 'journal'];
+const GROUP_ORDER = ['entry', '', 'stages', 'playbooks', 'index', 'templates', 'digests', 'journal'];
 
 function groupOf(rel) {
   const d = posix.dirname(rel);
