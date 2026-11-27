@@ -60,32 +60,32 @@
 
 | 步骤 | 这一步的产出物 | 位置 |
 |---|---|---|
-| 0 立项 | 一页目标与边界声明 | `stages/0-立项.md` |
-| 1 需求分析 | 现状、问题与证据、假设清单 | `stages/1-需求分析.md` |
-| 2 业务架构 | 业务架构图、流程、权限矩阵 | `stages/2-业务架构.md` |
-| 3 系统架构 | 架构图、模块清单、集成点 | `stages/3-系统架构.md` |
-| 4 领域建模 | 领域模型、术语表（含同名不同义） | `stages/4-领域建模.md` |
-| 5 技术架构+规格 | 选型、ADR、Spec、Tasks | `stages/5-技术架构与规格.md` |
-| 6 开发 | 代码、单测、提交记录 | `stages/6-开发.md` |
-| 7 测试验收 | 测试报告、AC 逐条结论 | `stages/7-测试与验收.md` |
-| 8 上线交接 | 部署记录、回退预案、手册 | `stages/8-上线与交接.md` |
-| 9 验证复盘 | 效果对照、复盘三条 | `stages/9-验证与复盘.md` |
+| 0 立项 | 一页目标与边界声明 | `docs/stages/0-立项.md` |
+| 1 需求分析 | 现状、问题与证据、假设清单 | `docs/stages/1-需求分析.md` |
+| 2 业务架构 | 业务架构图、流程、权限矩阵 | `docs/stages/2-业务架构.md` |
+| 3 系统架构 | 架构图、模块清单、集成点 | `docs/stages/3-系统架构.md` |
+| 4 领域建模 | 领域模型、术语表（含同名不同义） | `docs/stages/4-领域建模.md` |
+| 5 技术架构+规格 | 选型、ADR、Spec、Tasks | `docs/stages/5-技术架构与规格.md` |
+| 6 开发 | 代码、单测、提交记录 | `docs/stages/6-开发.md` |
+| 7 测试验收 | 测试报告、AC 逐条结论 | `docs/stages/7-测试与验收.md` |
+| 8 上线交接 | 部署记录、回退预案、手册 | `docs/stages/8-上线与交接.md` |
+| 9 验证复盘 | 效果对照、复盘三条 | `docs/stages/9-验证与复盘.md` |
 
 ## 剧本（playbooks）
 
 | 主题 | 一句话 | 位置 |
 |---|---|---|
-| 交付链条十步 | 全链总览，DDD 在④、SDD 横跨⑤⑥⑦、TDD 在⑥内部 | `playbooks/交付链条-十步.md` |
-| 接到活六步法 | 拿到一个活怎么快速推到提交（日常小活用这个） | `playbooks/接到活-六步法.md` |
-| 知识库规范总纲 | 一棵目录树+两张记录表+三份规范，解决「找不到/对不上/带不走」 | `playbooks/知识库规范-总纲.md` |
-| 项目目录规范 | 01-需求/02-开发/03-测试/04-部署 的十年不改结构 | `playbooks/项目目录规范-DevVault.md` |
+| 交付链条十步 | 全链总览，DDD 在④、SDD 横跨⑤⑥⑦、TDD 在⑥内部 | `docs/playbooks/交付链条-十步.md` |
+| 接到活六步法 | 拿到一个活怎么快速推到提交（日常小活用这个） | `docs/playbooks/接到活-六步法.md` |
+| 知识库规范总纲 | 一棵目录树+两张记录表+三份规范，解决「找不到/对不上/带不走」 | `docs/playbooks/知识库规范-总纲.md` |
+| 项目目录规范 | 01-需求/02-开发/03-测试/04-部署 的十年不改结构 | `docs/playbooks/项目目录规范-DevVault.md` |
 
 ## 本库自有（templates / digests / journal）
 
 | 主题 | 一句话 | 位置 |
 |---|---|---|
-| 规格模板 | 七项要素 + 编号验收标准 + 禁止 AI 自决事项 | `templates/spec-template.md` |
-| 决策记录模板 | Context→Decision→Consequences→Validation 四节 | `templates/adr-template.md` |
-| 任务清单模板 | 2–5 分钟粒度，含文件路径与验证步骤 | `templates/task-template.md` |
+| 规格模板 | 七项要素 + 编号验收标准 + 禁止 AI 自决事项 | `docs/templates/spec-template.md` |
+| 决策记录模板 | Context→Decision→Consequences→Validation 四节 | `docs/templates/adr-template.md` |
+| 任务清单模板 | 2–5 分钟粒度，含文件路径与验证步骤 | `docs/templates/task-template.md` |
 | 每日简报 | 按日期归档的情报简报 | `digests/YYYY-MM-DD.md`（索引见 `digests/INDEX.md`） |
 | 项目复盘 | 单项目结束后的脱敏复盘 | `journal/` |

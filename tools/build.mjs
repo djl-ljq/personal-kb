@@ -1,12 +1,14 @@
-// build.mjs — 把 md 源文件构建成可浏览的静态站（输出 _site/）
-// 用法：npm run build   预览：npm run preview
+// build.mjs — 把 md 源文件构建成可浏览的静态站（输出仓库根的 _site/）
+// 用法（在 tools/ 下）：npm run build   预览：npm run preview
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync, existsSync, rmSync, copyFileSync } from 'node:fs';
-import { join, dirname, extname, relative, posix } from 'node:path';
+import { join, dirname, extname, relative, posix, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
 
-const ROOT = process.cwd();
+// 本文件在 tools/ 下，仓库根是它的上一级
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, '_site');
-const SKIP_DIRS = new Set(['node_modules', '_site', '.git', '.workbuddy', 'dist', 'raw', 'private', '_staging', 'build']);
+const SKIP_DIRS = new Set(['node_modules', '_site', '.git', '.workbuddy', 'dist', 'raw', 'private', '_staging', 'tools', 'build']);
 
 /* ---------- 1. 收集 md 文件 ---------- */
 function walk(dir, acc = []) {
@@ -80,16 +82,18 @@ function rewriteLinks(html, fromRel) {
 /* ---------- 6. 导航 ---------- */
 const GROUP_LABEL = {
   entry: '入口',
-  '': '方法论（00–03）',
-  stages: '交付链 · 十步',
-  playbooks: '剧本',
+  core: '方法论（00–03）',
+  'docs/stages': '交付链 · 十步',
+  'docs/playbooks': '剧本',
+  'docs/templates': '模板',
   index: '索引',
-  templates: '模板',
   digests: '每日简报',
   journal: '项目复盘',
 };
-const GROUP_ORDER = ['entry', '', 'stages', 'playbooks', 'index', 'templates', 'digests', 'journal'];
+const GROUP_ORDER = ['entry', 'core', 'docs/stages', 'docs/playbooks', 'docs/templates', 'index', 'digests', 'journal'];
+const GROUP_MEMO = { entry: '入口', core: '方法论', 'docs/stages': '十步', 'docs/playbooks': '剧本', 'docs/templates': '模板', index: '索引', digests: '每日简报', journal: '复盘' };
 
+// 目录归属：docs/ 下的二级目录各自成组，其余按一级目录
 function groupOf(rel) {
   const d = posix.dirname(rel);
   return d === '.' ? '' : d.split('/')[0];
@@ -98,7 +102,12 @@ function groupOf(rel) {
 function navGroupOf(rel) {
   if (rel === 'README.md') return null;
   if (rel === 'AGENTS.md') return 'entry';
-  return groupOf(rel);
+  const parts = rel.split('/');
+  if (parts[0] === 'docs') {
+    if (parts.length === 2) return parts[1] === 'TOPICS.md' ? 'index' : 'core';
+    return `docs/${parts[1]}`;
+  }
+  return parts[0];
 }
 
 /* ---------- 7. 页面模板 ---------- */
@@ -234,9 +243,10 @@ for (const f of files) {
   html = rewriteLinks(html, f);
 
   const dir = posix.dirname(f);
+  const g = navGroupOf(f);
   const crumb = dir === '.'
     ? `<div class="crumb">首页</div>`
-    : `<div class="crumb"><a href="/">首页</a> / ${GROUP_LABEL[dir.split('/')[0]] || dir.split('/')[0]} / ${titles[f]}</div>`;
+    : `<div class="crumb"><a href="/">首页</a> / ${GROUP_MEMO[g] || g} / ${titles[f]}</div>`;
 
   const page = layout({
     title: `${titles[f]} · 个人工作知识库`,
@@ -252,8 +262,8 @@ for (const f of files) {
   writeFileSync(target, page, 'utf8');
 }
 
-/* 首页：用 README 渲染 + 分区卡片 */
-const rootFiles = files.filter((f) => groupOf(f) === '' && /^\d\d_/.test(f));
+/* 首页：用 README 渲染 + 四份核心文件卡片 */
+const rootFiles = files.filter((f) => navGroupOf(f) === 'core');
 const cards = rootFiles
   .map((f) => `<a class="card" href="/${f.replace(/\.md$/, '.html')}"><b>${titles[f]}</b><small>${firstParagraph(bodies[f]).slice(0, 70)}</small></a>`)
   .join('');
