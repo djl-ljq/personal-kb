@@ -24,6 +24,9 @@ __pycache__/
 raw/
 private/
 
+# 待确认暂存区：候选材料、盘点清单。确认脱敏后才移出到正式目录
+_staging/
+
 # 构建产物
 _site/
 node_modules/
